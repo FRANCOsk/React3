@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+//this is new react project
+
 function Okno() {
   const [input, setInput] = useState({hodnota:"", hodnota2:"",name: ""});
   const zmena = (event: React.ChangeEvent<HTMLInputElement>) => {
