@@ -11,6 +11,7 @@ import Info from "./Info";
 import Skoda from "./Skoda";
 import Kia from "./Kia";
 import Okno from "./Form";
+import Form2 from "./Form2";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.render(
           <Route path="SKODA" element={<Skoda />} />
           <Route path="KIA" element={<Kia />} />
           <Route path="OKNO" element={<Okno />} />
+          <Route path="Form2" element={<Form2 />} />
         </Route>
       </Routes>
     </BrowserRouter>

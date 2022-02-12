@@ -28,6 +28,9 @@ const Layout = () => {
           <li>
             <Link to="/Okno">Okno</Link>
           </li>
+          <li>
+            <Link to="/Form2">Form2</Link>
+          </li>
 
         </ul>
         </td>
