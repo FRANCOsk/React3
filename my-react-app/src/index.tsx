@@ -12,6 +12,7 @@ import Skoda from "./Skoda";
 import Kia from "./Kia";
 import Okno from "./Form";
 import Form2 from "./Form2";
+import 'bootstrap/dist/css/bootstrap.min.css';  
 
 ReactDOM.render(
   <React.StrictMode>

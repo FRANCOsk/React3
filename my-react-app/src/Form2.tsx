@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 function Form2() {
   const [input, setInput] = useState({ mail: "", pwd: "", date: "" });
@@ -8,50 +9,59 @@ function Form2() {
     setInput((values) => ({ ...values, [mail]: value }));
   };
 
+  function validate(mail: string): boolean {
+    if (mail.includes("@") && mail.includes(".")) {
+      return true;
+    }
+
+    return false;
+  }
+
   const send = (event: React.FormEvent<HTMLFormElement>) => {
-    console.log(input);
-    alert(input);
+    if (!validate(input.mail)) {
+      alert("Chybne zadanie");
+    } else {
+      console.log(input);
+      alert(input.mail);
+    }
   };
 
   return (
-    <form onSubmit={send}>
-      <>
-        <label>
-          Email
-          <input
-            name="mail"
-            type="mail"
-            value={input.mail || ""}
-            onChange={smena}
-          />
-        </label>
-        <br></br>
-        <label>
-          Password
-          <input
-            name="pwd"
-            type="password"
-            value={input.pwd || ""}
-            onChange={smena}
-          />
-        </label>
-        <br></br>
-        <label>
-          Datum
-          <input
-            name="date"
-            type="date"
-            value={input.date || ""}
-            onChange={smena}
-          />
-        </label>
-        <br></br>
-      </>
+    <Container>
+     <Row>
+       <Col md={3}> 
+    <Form onSubmit={send}  >
+     <Form.Group className="mb-3">
+      <Form.Label>Email</Form.Label>
 
-      <input type="search" />
-      <br></br>
-      <input type="submit" />
-    </form>
+      <Form.Control
+        name="mail"
+        type="email"
+        value={input.mail || ""}
+        onChange={smena}
+        placeholder="email"
+      />
+      <Form.Text className="text-muted">Enter valid email</Form.Text>
+    </Form.Group>
+      
+    <Form.Group className="mb-3">
+      <Form.Label>Password</Form.Label>
+
+      <Form.Control
+        name="pwd"
+        type="password"
+        value={input.pwd || ""}
+        onChange={smena}
+        placeholder="password"
+      />
+      <Form.Text className="text-muted">Enter valid password</Form.Text>
+     </Form.Group> 
+      <Button variant="primary" type="submit" >Submit </Button>
+    
+    </Form>
+    </Col>
+    </Row>
+    </Container>
   );
 }
 
