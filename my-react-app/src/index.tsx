@@ -13,6 +13,7 @@ import Kia from "./Kia";
 import Okno from "./Form";
 import Form2 from "./Form2";
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import Callback from "./Callback";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Route path="KIA" element={<Kia />} />
           <Route path="OKNO" element={<Okno />} />
           <Route path="Form2" element={<Form2 />} />
+          <Route path="Callback" element={<Callback />} />
         </Route>
       </Routes>
     </BrowserRouter>

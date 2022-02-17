@@ -31,6 +31,9 @@ const Layout = () => {
           <li>
             <Link to="/Form2">Form2</Link>
           </li>
+          <li>
+            <Link to="/Callback">Callback</Link>
+          </li>
 
         </ul>
         </td>
