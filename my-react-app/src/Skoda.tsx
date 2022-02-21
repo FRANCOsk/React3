@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import styles from './Skoda.module.css';
+
 
 const Skoda = () => {
   const [skoda, setSkoda] = useState({
@@ -11,11 +13,13 @@ const Skoda = () => {
       return { ...state, color: "blue", model: "Oktavia" };
     });
   };
+   
+  
 
   return (
     <>
       <h1 style={{ marginLeft: "30px" }}>SKODA</h1>
-      <p>Model is {skoda.model}</p>
+      <p className={styles.myStyle}>Model is {skoda.model}</p>
       <p>Color is {skoda.color}</p>
       <p>Year is {skoda.year}</p>
       <button type="button" onClick={setColor}>

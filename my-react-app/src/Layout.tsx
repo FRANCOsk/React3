@@ -34,6 +34,15 @@ const Layout = () => {
           <li>
             <Link to="/Callback">Callback</Link>
           </li>
+          <li>
+            <Link to="/Material">Material</Link>
+          </li>
+          <li>
+            <Link to="/Textarea">Textarea</Link>
+          </li>
+          <li>
+            <Link to="/Options">Options</Link>
+          </li>
 
         </ul>
         </td>

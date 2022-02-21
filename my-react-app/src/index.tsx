@@ -12,8 +12,11 @@ import Skoda from "./Skoda";
 import Kia from "./Kia";
 import Okno from "./Form";
 import Form2 from "./Form2";
+import Material from "./Material"
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import Callback from "./Callback";
+import Textarea from "./Textarea";
+import Options from "./Options";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,6 +32,9 @@ ReactDOM.render(
           <Route path="OKNO" element={<Okno />} />
           <Route path="Form2" element={<Form2 />} />
           <Route path="Callback" element={<Callback />} />
+          <Route path="Material" element={<Material />} /> 
+          <Route path="Textarea" element={<Textarea />} />  
+          <Route path="Options" element={<Options />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -14,14 +14,14 @@ function Callback() {
     setTodos((t) => [...t, "new Todo"]);
   }, [todos]);
 
- 
-
-
   return (
     <>
       <Todos todos={todos} addTodo={addTodo} />
-    <hr></hr>
-    <div>Count: {count}<button onClick={inkrement}>PLUS</button></div>
+      <hr></hr>
+      <div>
+        Count: {count}
+        <button onClick={inkrement}>PLUS</button>
+      </div>
     </>
   );
 }
