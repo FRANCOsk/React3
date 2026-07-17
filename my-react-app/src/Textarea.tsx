@@ -1,19 +1,18 @@
-import { EventHandler, useState } from "react";
+import { useState } from "react";
 
 function Textarea() {
-  const [textarea, setTextarea] = useState("test");
-  const change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setTextarea(event.target.value);
+  const [text, setText] = useState("test");
+
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setText(event.target.value);
   };
-  console.log(textarea);  
 
   return (
     <form>
-      <textarea onChange={change} value={textarea} />
+      <label htmlFor="example-text">Example text</label>
+      <textarea id="example-text" onChange={handleChange} value={text} />
     </form>
-    
   );
-  
 }
 
 export default Textarea;
