@@ -44,6 +44,7 @@ jobs:
         run: npm run build
         env:
           CI: true
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
