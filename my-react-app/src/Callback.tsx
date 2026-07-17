@@ -3,24 +3,25 @@ import Todos from "./ToDo";
 
 function Callback() {
   const [count, setCount] = useState(0);
-
   const [todos, setTodos] = useState<any[]>([]);
 
-  const inkrement = () => {
-    setCount((c) => c + 1);
+  const increment = () => {
+    setCount((currentCount) => currentCount + 1);
   };
 
   const addTodo = useCallback(() => {
-    setTodos((t) => [...t, "new Todo"]);
-  }, [todos]);
+    setTodos((currentTodos) => [...currentTodos, "new Todo"]);
+  }, []);
 
   return (
     <>
       <Todos todos={todos} addTodo={addTodo} />
-      <hr></hr>
+      <hr />
       <div>
         Count: {count}
-        <button onClick={inkrement}>PLUS</button>
+        <button type="button" onClick={increment}>
+          PLUS
+        </button>
       </div>
     </>
   );
