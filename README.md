@@ -8,14 +8,14 @@ The React application lives in [`my-react-app`](./my-react-app).
 
 ## Requirements
 
-- Node.js 20
+- Node.js 22
 - npm 10+
 
 ## Local development
 
 ```bash
 cd my-react-app
-npm ci
+npm install
 npm start
 ```
 
@@ -32,7 +32,7 @@ npm audit --omit=dev --audit-level=high
 
 ## Continuous integration
 
-GitHub Actions installs dependencies from the lock file, runs the test suite, builds the production bundle and audits production dependencies for high or critical vulnerabilities.
+GitHub Actions installs the declared dependency graph, runs the test suite, builds the production bundle and audits production dependencies for high or critical vulnerabilities.
 
 ## Notes
 
